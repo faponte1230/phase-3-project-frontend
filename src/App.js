@@ -21,6 +21,10 @@ function App() {
     console.log(newGym)
   }
 
+  function updateGym(newGymdata){
+    const updatedGyms = gyms.map((gym) => gym.id === newGymdata.id ? newGymdata : gym)
+    setGyms(updatedGyms)
+  }  
   return (
     <div className="App">
       <Header />
