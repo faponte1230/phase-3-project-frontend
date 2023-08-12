@@ -25,6 +25,13 @@ function App() {
     const updatedGyms = gyms.map((gym) => gym.id === newGymdata.id ? newGymdata : gym)
     setGyms(updatedGyms)
   }  
+
+  function deleteGym(id){
+    const deletedGyms = gyms.filter(gym => gym.id !== id)
+    setGyms(deletedGyms)
+    console.log('deleted')
+  }
+
   return (
     <div className="App">
       <Header />
