@@ -16,7 +16,11 @@ function App() {
     .then(gymData => setGyms(gymData))
   }, [])
 
-  
+  function addGym(newGym){
+    setGyms([...gyms, newGym])
+    console.log(newGym)
+  }
+
   return (
     <div className="App">
       <Header />
