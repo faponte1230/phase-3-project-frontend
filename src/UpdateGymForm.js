@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function UpdateGym({updateGym}){
+function UpdateGymForm({updateGym}){
     const [updatedGym, setUpdatedGym] = useState(
         {
             name: '',
@@ -66,4 +66,4 @@ function UpdateGym({updateGym}){
     )
 }
 
-export default UpdateGym
+export default UpdateGymForm

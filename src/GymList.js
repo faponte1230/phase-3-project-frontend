@@ -1,8 +1,7 @@
 import React from "react";
 import IndiGyms from "./IndiGyms";
 import GymForm from "./GymForm";
-import UpdateGym from "./UpdateGym";
-
+import UpdateGymForm from "./UpdateGymForm";
 function GymList({ addGym, gyms , updateGym , deleteGym}){
     
     let displayGyms = gyms.map( g => {
@@ -18,7 +17,7 @@ function GymList({ addGym, gyms , updateGym , deleteGym}){
                 <br></br>
                 <GymForm addGym={addGym} />
                 <br></br>
-                <UpdateGym updateGym={updateGym}/>
+                <UpdateGymForm updateGym={updateGym}/>
             </div>
             {displayGyms}
         </div>
