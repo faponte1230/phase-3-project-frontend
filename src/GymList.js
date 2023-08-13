@@ -1,8 +1,7 @@
 import React from "react";
 import IndiGyms from "./IndiGyms";
-import GymForm from "./GymForm";
-import UpdateGymForm from "./UpdateGymForm";
-function GymList({ addGym, gyms , updateGym , deleteGym}){
+
+function GymList({gyms , deleteGym}){
     
     let displayGyms = gyms.map( g => {
         return(
@@ -12,13 +11,6 @@ function GymList({ addGym, gyms , updateGym , deleteGym}){
 
     return(
         <div className='home'>
-            <div className='nav'>
-                
-                <br></br>
-                <GymForm addGym={addGym} />
-                <br></br>
-                <UpdateGymForm updateGym={updateGym}/>
-            </div>
             {displayGyms}
         </div>
     )
