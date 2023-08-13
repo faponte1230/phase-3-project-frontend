@@ -1,7 +1,7 @@
 import React from "react";
 import IndiGyms from "./IndiGyms";
 import GymForm from "./GymForm";
-//import UpdateGym from "./UpdateGym";
+import UpdateGym from "./UpdateGym";
 
 function GymList({ addGym, gyms , updateGym , deleteGym}){
     
@@ -18,7 +18,7 @@ function GymList({ addGym, gyms , updateGym , deleteGym}){
                 <br></br>
                 <GymForm addGym={addGym} />
                 <br></br>
-                <h1>add update gym</h1>
+                <UpdateGym updateGym={updateGym}/>
             </div>
             {displayGyms}
         </div>
