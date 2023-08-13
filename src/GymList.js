@@ -1,6 +1,6 @@
 import React from "react";
 import IndiGyms from "./IndiGyms";
-//import GymForm from "./GymForm";
+import GymForm from "./GymForm";
 //import UpdateGym from "./UpdateGym";
 
 function GymList({ addGym, gyms , updateGym , deleteGym}){
@@ -16,7 +16,7 @@ function GymList({ addGym, gyms , updateGym , deleteGym}){
             <div className='nav'>
                 
                 <br></br>
-                <h1>add gym form</h1>
+                <GymForm addGym={addGym} />
                 <br></br>
                 <h1>add update gym</h1>
             </div>
