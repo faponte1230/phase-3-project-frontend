@@ -13,16 +13,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
@@ -35,4 +25,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-header {
+  background-color: #e9cec0;
+  min-height: flex;
+  display: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: rgb(2, 2, 2);
+}
+
+.home{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.gymCard {
+  display: flex;
+  text-align: left;
+  text-emphasis-color: rgb(239, 237, 237);
+  text-shadow: rgb(215, 61, 34);
+  background: #e9cec0;
+  margin: 12px;
+  border: 10px;
+  padding: 5px;
+  color: black;
+  width: 30%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+} 
+
+.img {
+  padding: 15px;
+  height: 200px;
+  width: 200px;
+}
+
+.button{
+  padding: 1px;
+  margin: 3px;
+  align-items: center;
+}
+
+.section{
+  background-color: #9799a5;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
