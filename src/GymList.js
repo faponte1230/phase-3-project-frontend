@@ -1,5 +1,5 @@
 import React from "react";
-import Gym from './Gym';
+import IndiGyms from "./IndiGyms";
 //import GymForm from "./GymForm";
 //import UpdateGym from "./UpdateGym";
 
@@ -7,7 +7,7 @@ function GymList({ addGym, gyms , updateGym , deleteGym}){
     
     let displayGyms = gyms.map( g => {
         return(
-           <Gym key={g.id} gym={g} deleteGym={deleteGym} />
+           <IndiGyms key={g.id} gym={g} deleteGym={deleteGym} />
         )
     })
 

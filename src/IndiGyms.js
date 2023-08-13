@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-function Gym({gym, deleteGym}){
+function IndiGyms({gym, deleteGym}){
 
     console.log(gym.id)
     
@@ -29,4 +29,4 @@ function Gym({gym, deleteGym}){
     )
 }
 
-export default Gym
+export default IndiGyms
