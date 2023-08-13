@@ -30,3 +30,5 @@ function IndiGyms({gym, deleteGym}){
 }
 
 export default IndiGyms
+
+/*  */
