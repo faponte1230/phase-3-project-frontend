@@ -1,7 +1,7 @@
 import { React ,useState, useEffect} from 'react';
 import { Route, Routes} from 'react-router-dom';
 import Header from './Header';
-
+import GymList from './GymList';
 import './App.css';
 
 
@@ -31,13 +31,14 @@ function App() {
     setGyms(deletedGyms)
     console.log('deleted')
   }
-
+  
   return (
     <div className="App">
       <Header />
       <br></br>
       <Routes>
-
+        <Route path='/' element={<GymList addGym={addGym} gyms={gyms} updateGym={updateGym} deleteGym={deleteGym}/>}/>
+        
       </Routes>
     </div>
   );
