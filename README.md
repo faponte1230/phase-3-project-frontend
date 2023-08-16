@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Gym RATE
+Gym RATe is a full stack application that utilizes a React frontend and a Ruby backend. This application allows the user to add their own gym to the database. Once the gym is added to the database, a user may also leave a review on the gym's review page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Technologies Used
+Ruby
+ActiveRecord
+Sinatra
+React.js
+React Router
 
-## Available Scripts
+# Installation
+Once both repositories are locally installed and opened on your machine, run '$bundle install' in the backend repo ternmial to install all the backend dependencies for the application. Do the same for the frontend repo, but run '$npm install' instead to download all the frontend dependencies.
+After the dependencies are installed, seed the database by running bundle exec rake db:seed in the backend terminal.
+Then start the server by running '$bundle exec rake server'
+Start the application by running '$npm start' in the frontend repo terminal. After this you are all set to start using the application!
 
-In the project directory, you can run:
+# UI
+The user is able to add gyms to the database through a controlled form.
+When adding a gym, the user will input the name, location, image URL, number of gyms, and membership price. This will be sent to backend via a POST request.
 
-### `npm start`
+The user can make a review for newly added gyms and pre-existing gyms through a controlled form. This will be sent to the backend via a POST request.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The user may edit the gyms that are currently in the database as well as delete them. These edits are then sent back to the database via a PATCH and DELETE request.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+While the backend database is updated, the frontend will update in response to the changes made by its HTTP requests made possible with routes defined in the backend application controller.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Project Requirements
+This project:
+Uses ActiveRecord to interact with a SQLite database
+Uses a database with a one-to-many relationship
+Allows all gym full CRUD and reviews to have CR&D functionality
+Only relys on one initial GET request to get the data from the database
+Follows RESTful conventions
