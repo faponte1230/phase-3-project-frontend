@@ -53,8 +53,7 @@ function GymForm({addGym}){
 
     return(
         <div className='nav'>
-            <h1>Add a New Gym</h1>
-            <div></div>
+            
             <form onSubmit={handleSubmit}>
                 <input type='text' name='name' value={newGym.name} placeholder='Enter Name' onChange={handleChange}></input>
                 <input type='text' name='image_url' value={newGym.image_url} placeholder='Enter Image URL' onChange={handleChange}></input>

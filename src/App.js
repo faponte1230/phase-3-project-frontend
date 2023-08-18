@@ -4,7 +4,7 @@ import Header from './Header';
 import GymList from './GymList';
 import './App.css';
 import GymForm from './GymForm';
-import UpdateGymForm from './UpdateGymForm';
+//import UpdateGymForm from './UpdateGymForm';
 import GymReviews from './GymReviews';
 
 
@@ -36,8 +36,10 @@ function App() {
   
   function addNewReview(newReview){
     const currentGym = gyms.find((gym) => gym.id === newReview.gym_id)
-    currentGym.reviews.push(newReview)
-    const updatedgyms = gyms.map((gym) => gym.id === currentGym.id ? currentGym : gym)
+    const updatedReviews = [...currentGym.reviews, newReview]
+    const updatedGym = {...currentGym, reviews: updatedReviews}
+    //currentGym.reviews.push(newReview)
+    const updatedgyms = gyms.map((gym) => gym.id === currentGym.id ? updatedGym : gym)
     setGyms(updatedgyms)
   }
 
@@ -57,12 +59,12 @@ function App() {
         <Route path='/' element={
           <>
             <GymForm addGym={addGym} />
-            <UpdateGymForm updateGym={updateGym} />
+            
             <GymList gyms={gyms} updateGym={updateGym} deleteGym={deleteGym}/>
           </>}>
         </Route>
-
-        <Route path='/reviews/:gym_id' element={<GymReviews gyms={gyms} addNewReview={addNewReview} deleteReview={deleteReview}/>} />
+          {/* "/gyms/:gym_id/reviews" */}
+        <Route path="/gyms/:gym_id/reviews" element={<GymReviews gyms={gyms} addNewReview={addNewReview} deleteReview={deleteReview}/>} />
       </Routes>
     </div>
   );

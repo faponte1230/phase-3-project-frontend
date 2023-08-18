@@ -1,11 +1,11 @@
 import React from "react";
 import IndiGyms from "./IndiGyms";
 
-function GymList({gyms , deleteGym}){
+function GymList({gyms , deleteGym, updateGym}){
     
     let displayGyms = gyms.map( g => {
         return(
-           <IndiGyms key={g.id} gym={g} deleteGym={deleteGym} />
+           <IndiGyms key={g.id} gym={g} deleteGym={deleteGym} updateGym={updateGym} />
         )
     })
 

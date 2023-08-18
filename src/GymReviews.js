@@ -7,7 +7,7 @@ function GymReviews({gyms, addNewReview, deleteReview}){
     
     const {gym_id}= useParams()
 
-    const currentGym = gyms.find((gym) => gym.id == gym_id)
+    const currentGym = gyms.find((gym) => gym.id === parseInt(gym_id))
     console.log(currentGym)
     console.log(gym_id ,'param')
     //const { gymObj } = currentGym
@@ -19,7 +19,7 @@ function GymReviews({gyms, addNewReview, deleteReview}){
         <div>
             <div className='gymCard'>
                 <h2>Name: {currentGym.name}</h2>
-                <h3>ID: {currentGym.id}</h3>
+                
                 <img src={currentGym.image_url} alt={'Not Found'} className="img" />
                 <h3>Location: {currentGym.location}</h3>
                 <h3>Number of Gyms: {currentGym.number_of_gyms}</h3>
@@ -49,9 +49,3 @@ function GymReviews({gyms, addNewReview, deleteReview}){
 
 export default GymReviews
 
-/*
-
-
-
-                    
-                */
